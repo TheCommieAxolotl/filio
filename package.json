@@ -1,0 +1,63 @@
+{
+    "name": "filio",
+    "description": "A simple configuration loader that supports various file formats such as js, ts, yaml and more.",
+    "version": "0.0.1",
+    "author": "TheCommieAxolotl",
+    "license": "MIT",
+    "type": "module",
+    "funding": "https://github.com/TheCommieAxolotl/filio?sponsor=1",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/TheCommieAxolotl/filio"
+    },
+    "homepage": "https://github.com/TheCommieAxolotl/filio#readme",
+    "types": "index.d.ts",
+    "files": [
+        "dist",
+        "index.d.ts"
+    ],
+    "main": "dist/index.cjs",
+    "module": "dist/index.js",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
+        }
+    },
+    "keywords": [
+        "configuration",
+        "config",
+        "loader",
+        "typescript",
+        "yaml",
+        "json",
+        "js",
+        "node"
+    ],
+    "scripts": {
+        "build": "rollup -c",
+        "dev": "rollup -c -w",
+        "test": "node test/index.test.js",
+        "prepublishOnly": "pnpm build",
+        "docs:dev": "vitepress dev docs",
+        "docs:build": "vitepress build docs",
+        "docs:preview": "vitepress preview docs"
+    },
+    "devDependencies": {
+        "@rollup/plugin-commonjs": "^24.0.1",
+        "@rollup/plugin-node-resolve": "^13.0.6",
+        "@rollup/plugin-terser": "^0.4.0",
+        "@rollup/plugin-typescript": "^8.2.1",
+        "@types/coffeescript": "^2.5.2",
+        "@types/js-yaml": "^4.0.5",
+        "coffeescript": "^2.7.0",
+        "jiti": "^1.18.2",
+        "js-yaml": "^4.1.0",
+        "rollup": "^2.56.3",
+        "thena": "^0.0.10",
+        "tslib": "^2.3.0",
+        "typescript": "^4.3.5",
+        "vitepress": "1.0.0-alpha.65",
+        "vue": "^3.2.47"
+    }
+}

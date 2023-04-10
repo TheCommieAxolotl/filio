@@ -1,0 +1,107 @@
+/**
+ * Customize default theme styling by overriding CSS variables:
+ * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ */
+
+/**
+ * Colors
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-c-accent: #e9f271;
+    --vp-c-brand: #64acff;
+    --vp-c-brand-light: #74acff;
+    --vp-c-brand-lighter: #94c2ff;
+    --vp-c-brand-lightest: #bcd2ff;
+    --vp-c-brand-dark: #539bf2;
+    --vp-c-brand-darker: #4586e1;
+    --vp-c-brand-dimm: rgba(100, 180, 255, 0.08);
+    --vp-code-line-highlight-color: rgba(255, 255, 255, 0.05);
+}
+
+/**
+ * Component: Home
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: -webkit-linear-gradient(120deg, var(--vp-c-brand-light) 30%, var(--vp-c-accent));
+}
+
+/**
+ * Component: Custom Block
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-custom-block-tip-border: var(--vp-c-brand);
+    --vp-custom-block-tip-text: var(--vp-c-brand-darker);
+    --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
+}
+
+.dark {
+    --vp-custom-block-tip-border: var(--vp-c-brand);
+    --vp-custom-block-tip-text: var(--vp-c-brand-lightest);
+    --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
+}
+
+/**
+ * Component: Posts
+ * -------------------------------------------------------------------------- */
+
+h1.blog-title {
+    line-height: 64px;
+    font-size: 56px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    margin: 2% 0 5% 0;
+}
+
+.post-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 1rem;
+    margin: 1rem 10%;
+}
+
+.blog-post {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    background-color: var(--vp-c-bg-elv);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: background-color 0.2s ease;
+    padding: 20px;
+    gap: 10px;
+}
+
+.blog-post:hover {
+    background-color: var(--vp-c-bg-soft-up);
+}
+
+.post-title {
+    font-size: 24px;
+    font-weight: 650;
+    margin: 0;
+}
+
+.post-info {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    opacity: 0.8;
+}
+
+.post-description {
+    opacity: 0.8;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+}
