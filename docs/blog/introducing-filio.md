@@ -1,11 +1,11 @@
 ---
 description: Introducing filio, a configuration loader that really doesn't care what language you use.
 author: TheCommieAxolotl
-date: 2021-08-29
+date: 2023-04-10
 ---
 
 # Introducing filio! 🎉
-{{ ((date)=>{const d=new Date(date);return d.toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'})})($frontmatter.date) }}, written by {{ $frontmatter.author }}
+April 10, 2023, written by TheCommieAxolotl
 
 filio is a configuration loader that really doesn't care what language you use. It aims to make loading configuration files easier, faster and to allow users more control over *how* they write their configuration files.
 
